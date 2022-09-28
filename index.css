@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 20px;
+    color: #fff;
+    background-color: #1C1C1C;
+}
+
+main {
+    width: 500px;
+    height: 500px;;
+    margin: 0 auto;
+    background-color: #1F2937;
+    padding: 70px 50px;
+}
+
+h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    margin: 0;
+}
+
+.title-green {
+    color: #4ADF86;
+}
+
+p {
+    width: clamp(45ch, 50%, 75ch);
+    color: #D5D4D8;
+}
+
+button {
+    background-color: #10B981;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    color: #fff;
+    margin-top: 51px;
+}
+
+.passwords {
+    display: flex;
+    gap: 24px;
+    border-top: 1px solid #2F3E53;
+    margin-top: 35px;
+    padding-top: 35px;
+}
+
+#password1,
+#password2 {
+    background-color: #273549;
+    color: #55F991;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
