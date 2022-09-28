@@ -2,6 +2,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 "/"]
 let passOneEl = document.getElementById("password1")
 let passTwoEl = document.getElementById("password2")
+let pwLengthEl = document.getElementById("pw-length")
 let passOne = ""
 let passTwo = ""
 
@@ -10,10 +11,11 @@ function getRandom() {
 }
 
 function getPasswords() {
-    for (let i = 0; i < 16; i++) {
+    let passwordLength = pwLengthEl.value
+    for (let i = 0; i < passwordLength; i++) {
         passOne += getRandom()
     }
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < passwordLength; i++) {
         passTwo += getRandom()
     }
     passOneEl.textContent = passOne
