@@ -35,8 +35,11 @@ h1 {
 }
 
 p {
-    width: clamp(45ch, 50%, 75ch);
     color: #D5D4D8;
+}
+
+.options {
+    width: 350px;
 }
 
 .checkboxes {
@@ -51,22 +54,29 @@ button {
     border-radius: 5px;
     padding: 8px 15px;
     color: #fff;
-    margin-top: 51px;
+}
+
+button#generatebtn {
+    margin-top: 20px;
+}
+
+button#copypassbtn {
+    margin-left: 10px;
 }
 
 .passwords {
     display: flex;
-    gap: 24px;
     border-top: 1px solid #2F3E53;
-    margin-top: 35px;
-    padding-top: 35px;
+    margin-top: 30px;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
-#password1,
-#password2 {
+#password {
     background-color: #273549;
     color: #55F991;
-    width: 220px;
+    width: 225px;
     height: 40px;
     border-radius: 5px;
     display: flex;

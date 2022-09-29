@@ -3,12 +3,12 @@ const keys = {
     number: "0123456789",
     symbol: "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
   }
-let passOneEl = document.getElementById("password1")
-let passTwoEl = document.getElementById("password2")
+let passwordEl = document.getElementById("password")
 let pwLengthEl = document.getElementById("pw-length")
-let inLettersEl = document.getElementById("in-letters-chk").checked
-let inSymbolsEl = document.getElementById("in-symbols-chk").checked
-let inNumbersEl = document.getElementById("in-numbers-chk").checked
+
+let letters = document.getElementById("letters").checked
+let symbols = document.getElementById("symbols").checked
+let numbers = document.getElementById("numbers").checked
 
 let getKey = [
     function characters() {
@@ -22,12 +22,19 @@ let getKey = [
     }
 ]
 
-function getPasswords() {
+function getPassword() {
     let passwordLength = pwLengthEl.value
-    let passOne = ""
-    while (passwordLength > passOne.length) {
+    let password = ""
+    while (passwordLength > password.length) {
       let keyToAdd = getKey[Math.floor(Math.random() * getKey.length)]
-      passOne += keyToAdd()
+      password += keyToAdd()
     }
-    passOneEl.textContent = passOne
+    passwordEl.textContent = password
+    return password
+}
+
+function copyPassword() {
+    password = passwordEl.textContent
+    navigator.clipboard.writeText(password)
+    alert("Copied password.")
 }
